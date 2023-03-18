@@ -45,7 +45,7 @@ const name = ({ user }) => {
     <>
       <div className="profile-box">
         <div className="profile-image-wrapper">
-          <img
+          <Image
             className="profile-image"
             src={user.avatar_url}
             alt={`${user.name} 프로필 이미지`}
