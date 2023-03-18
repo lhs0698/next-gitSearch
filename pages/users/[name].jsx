@@ -41,11 +41,12 @@ const name = ({ user }) => {
   if(!user) {
       return null;
   }
+  
   return (
     <>
       <div className="profile-box">
         <div className="profile-image-wrapper">
-          <Image
+          <img
             className="profile-image"
             src={user.avatar_url}
             alt={`${user.name} 프로필 이미지`}
@@ -60,6 +61,7 @@ const name = ({ user }) => {
   );
 };
 export const getServerSideProps = async ({ query }) => {
+  
   const { name } = query;
   try {
     const res = await fetch(`https://api.github.com/users/${name}`);
